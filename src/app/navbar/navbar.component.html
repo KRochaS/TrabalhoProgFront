@@ -1,0 +1,35 @@
+<div class="uk-background-primary uk-light">
+	<div class="uk-container">
+		<nav class="uk-navbar-container uk-navbar-transparent uk-margin uk-flex-between" uk-navbar>
+			<div class="uk-navbar-left">
+				<a class="uk-navbar-item uk-logo"[routerLink]="['/']">
+					<span class="uk-icon uk-margin-small-right" uk-icon="icon: icon-color-dark; ratio: 0.05">Info.Fibro</span>
+				</a>
+
+				<ul class="uk-navbar-nav">
+					<li><a [routerLink]="['/']" routerLinkActive="uk-text-bold"> Início</a></li>
+					<li><a [routerLink]="['/apoie']" routerLinkActive="uk-text-bold">Apoie </a> </li>
+					<li> <a [routerLink]="['/informacoes']" routerLinkActive="uk-text-bold"> Informações</a></li>
+				</ul>
+			</div>
+			<div class="uk-flex" uk-grid>
+				<ul class="uk-subnav uk-subnav-pill" uk-margin>
+                    <li>
+                        <a> Conta <span uk-icon="icon:  triangle-down"></span></a>
+                        <div uk-dropdown="mode: click;" class="uk-padding-small">
+                            <ul class="uk-nav uk-dropdown-nav ">
+                                <li><a [routerLink]="['/signup']" style="color:black !important;"> {{user.name}}</a></li>
+                                <li><a (click)="logout()" style="color:black !important;">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+			
+		</nav>
+	</div>
+</div>
+
+
+

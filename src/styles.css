@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    color: #fff;
+  }
+  li a {
+    color: #fff !important;
+  }
+  
+  h3 {
+    color: #fff;
+  }
+  
+  span {
+    color: #fff !important;
+  }
+  
+  p-dialog span {
+      color: #000 !important;
+  }
+  
+  
+  .uk-button-text {
+    color: #D9B343;
+  }
+  time {
+    color: #7ABFB3;
+  }
