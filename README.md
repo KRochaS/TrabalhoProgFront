@@ -56,4 +56,4 @@ ng serve
 
 ## :link: Link de acesso
 
-https://info-fibro.vercel.app/
+<a href="https://info-fibro.vercel.app/" target="_blank"> info-fibro.vercel.app/ </a>
