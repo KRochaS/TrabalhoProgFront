@@ -55,4 +55,5 @@ ng serve
 ```
 
 ## :link: Link de acesso
-[InfoFibro](https://info-fibro.vercel.app/?target=_blank)
+
+https://info-fibro.vercel.app/
