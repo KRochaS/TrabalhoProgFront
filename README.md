@@ -33,4 +33,27 @@ O sistema proposto é direcionado para levar apoio para as pessoas que sofrem da
 - [x] Criação e estilização da página <i> Cadastre-se </i>
 - [x] Criação e estilização da página <i> Autentique-se </i>
 
+## :sparkles: Executar o projeto
 
+ ##### Requisitos 
+ 
+- [Git](https://git-scm.com/)
+- [NodeJS](https://nodejs.org/en/)
+
+```bash
+# Clonar o repositório
+git clone https://github.com/KRochaS/TrabalhoProgFront.git
+
+# Entrar no diretório
+cd TrabalhoProgFront/
+
+# Baixar as dependências do projeto
+npm install
+
+# Executar o projeto
+ng serve
+```
+
+## :link: Link de acesso
+
+https://info-fibro.vercel.app/
