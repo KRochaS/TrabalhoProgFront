@@ -18,7 +18,8 @@
 Desenvolvido para a disciplina de Programação Front-end.
 O sistema proposto é direcionado para levar apoio para as pessoas que sofrem da sindrome de Fibromialgia, uma síndrome que causa dores em todo o corpo e informações para as pessoas que não possuem conhecimento.
 
-## :bookmark_tabs: Funcionalidades
+## :bookmark_tabs: Funcionalidades 
+###### :construction: em construção
 
 #### Módulo 1: Proposta
 - [x] Criação da proposta do projeto a ser implementado
@@ -31,3 +32,5 @@ O sistema proposto é direcionado para levar apoio para as pessoas que sofrem da
 - [x] Criação e estilização da página <i> Informações </i>
 - [x] Criação e estilização da página <i> Cadastre-se </i>
 - [x] Criação e estilização da página <i> Autentique-se </i>
+
+
