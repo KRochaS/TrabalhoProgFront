@@ -29,7 +29,7 @@ export class ContaComponent implements OnInit {
     }
 
     onSubmit() {
-        this.loading = true;
+   
     }
 
     changeType(password) {
