@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToasterService } from 'angular2-toaster';
+import { CustomValidator } from 'src/app/validators/custom.validator';
 
 @Component({
   selector: 'app-login',
@@ -17,8 +18,16 @@ export class LoginComponent implements OnInit {
     private router: Router) {
 
       this.form = this.formBuilder.group({
-        email: ['', Validators.required],
-        senha: ['', Validators.required]
+        email: ['', Validators.compose([
+            Validators.required,
+            CustomValidator.EmailValidator,
+            CustomValidator.MinLengthValidator,
+        ])],
+        senha: ['', Validators.compose([
+            Validators.required,
+            CustomValidator.MinLengthValidator,
+            CustomValidator.MaxLengthValidator
+        ])],
       })
 
     }

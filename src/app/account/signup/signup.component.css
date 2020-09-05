@@ -1,0 +1,7 @@
+.form-danger {
+    border: 1px solid red !important;
+}
+
+button:disabled {
+    background-color: #AF82E2 !important;
+}

@@ -13,18 +13,34 @@
       </div>
 
       <form [formGroup]="form" class="uk-margin">
-        <div class="uk-margin">
-          <input formControlName="email" type="email" class="uk-input uk-form-large" placeholder="E-mail">
+        <div [ngClass]="{'uk-margin-small': form.controls.email.invalid, 'uk-margin':  form.controls.email.valid}">
+          <input formControlName="email" type="email" class="uk-input uk-form-large" placeholder="E-mail"
+          [ngClass]="{'form-danger': (!form.controls.email.valid && !form.controls.email.pristine || !form.controls.email.valid)}">
 
         </div>
-        <div class="uk-margin">
-          <input formControlName="senha" type="password" class="uk-input uk-form-large" placeholder="Senha">
+        <div class="uk-form-danger">
+            {{!form.controls.email.valid && !form.controls.email.pristine ? 'E-mail inválido': ''}}
+
+            {{!form.controls.email.valid && form.controls.email.pristine ? '*Campo Obrigatório': ''}}
+
+
+        </div>
+
+        <div class="uk-margin-small">
+          <input formControlName="senha"  type="password" class="uk-input uk-form-large" placeholder="Senha"
+          [ngClass]="{'form-danger': (!form.controls.senha.valid && !form.controls.senha.pristine || !form.controls.senha.valid)}">
+        </div>
+        <div class="uk-form-danger">
+            {{!form.controls.senha.valid && form.controls.senha.pristine ? '*Campo Obrigatório': ''}}
+
+            {{form.controls.senha.value.length > 10 && !form.controls.senha.pristine ? '*Máximo 10 caracteres': ''}}
+
         </div>
 
       </form>
 
       <div class="uk-margin uk-text-right">
-        <a (click)="submit()" class="uk-button uk-button-default"> Entrar</a>
+        <button (click)="submit()" [disabled]="!form.controls.email.valid" class="uk-button uk-button-default"> Entrar </button>
       </div>
     </div>
 
