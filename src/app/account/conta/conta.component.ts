@@ -10,12 +10,8 @@ import { Router } from '@angular/router';
 })
 export class ContaComponent implements OnInit {
     public form: FormGroup;
-    loading = false;
-    dataList;
-    user;
-    usersAutenticado;
-    UserDbKey;
     toggle;
+  
     constructor(private formBuilder: FormBuilder,
         private toasterService: ToasterService,
         private router: Router) {
@@ -33,7 +29,7 @@ export class ContaComponent implements OnInit {
     }
 
     onSubmit() {
-        this.loading = true;
+   
     }
 
     changeType(password) {

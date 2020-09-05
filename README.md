@@ -27,9 +27,9 @@ O sistema proposto é direcionado para levar apoio para as pessoas que sofrem da
 - [x] Criação da proposta do projeto a ser implementado
 
 
-#### Módulo 2: Layout
+#### Módulo 2: HTML e CSS
 - [x] Criação e estilização da navegação entre as páginas
-- [x] Criação e estilização da página <i> Home </i>
+- [x] Criação e estilização da página <i> Início </i>
 - [x] Criação e estilização da página <i> Apoie </i>
 - [x] Criação e estilização da página <i> Informações </i>
 - [x] Criação e estilização da página <i> Cadastre-se </i>
