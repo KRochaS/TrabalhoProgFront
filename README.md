@@ -34,6 +34,24 @@ O sistema proposto é direcionado para levar apoio para as pessoas que sofrem da
 - [x] Criação e estilização da página <i> Informações </i>
 - [x] Criação e estilização da página <i> Cadastre-se </i>
 - [x] Criação e estilização da página <i> Autentique-se </i>
+- [x] Deploy do <i> front-end </i> na [Vercel](https://vercel.com/)
+
+#### Módulo 4: Javascript
+- [x] Validação dos formulários
+- [x] Criação de <i>Models</i> para Usuário e Apoiadores
+- [x] Criação de <i> Services </i> de Usuário e Apoiadores
+- [x] Utilização do [JSON Server](https://github.com/typicode/json-server) (API Fake)
+   - [x] Criação de conta utilizando método POST
+   - [x] Gravação de Apoiadores utilizando método POST
+   - [x] Exclusão de usuário utilizando método DELETE
+   - [x] Busca de Usuários já cadastrados utilizando método GET
+   - [x] Busca de apoiadores já cadastrados utilizando método GET
+- [x] Autentificação do usuário utilizando <i> localstorage </i>
+- [x] Deploy do <i> Backend fake (db.json) </i> na [Heroku](https://www.heroku.com/)
+- [x] Utilização da lib  [concurrently](https://www.npmjs.com/package/concurrently) 
+        <br />
+  <i> Utilizada para mesclar dois comandos para rodar o projeto <br>
+          (front-end e backend fake) em um comando só</i>
 
 ## :sparkles: Executar o projeto
 
@@ -53,7 +71,7 @@ cd TrabalhoProgFront/
 npm install
 
 # Executar o projeto
-ng serve
+ng run dev
 ```
 
 ## :link: Link de acesso
