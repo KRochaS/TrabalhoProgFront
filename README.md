@@ -71,7 +71,7 @@ cd TrabalhoProgFront/
 npm install
 
 # Executar o projeto
-ng run dev
+npm run dev
 ```
 
 ## :link: Link de acesso
