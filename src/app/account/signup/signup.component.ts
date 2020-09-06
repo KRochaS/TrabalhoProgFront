@@ -55,7 +55,7 @@ export class SignupComponent implements OnInit {
 
       saveUsers(usuario) {
 
-        const userCadastrado = this.usuarios.find(user => usuario.email === user.email);
+        const userCadastrado = this.usuarios ? this.usuarios.find(user => usuario.email === user.email) : null;
 
         console.log(userCadastrado);
 
