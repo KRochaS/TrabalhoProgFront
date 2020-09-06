@@ -3,15 +3,14 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { Usuarios } from '../models/usuarios';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
+import config from '../config';
+
+const URL_USUARIOS = `${config.URL_BACKEND}/usuarios`;
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuariosService {
-
-    url = 'http://localhost:3000/usuarios'; // api rest fake
-
-
 
  // injetando o HttpClient
  constructor(private httpClient: HttpClient) { }
@@ -23,7 +22,7 @@ export class UsuariosService {
 
   // Obtem todos os usuarios
   getUsers(): Observable<Usuarios[]> {
-    return this.httpClient.get<Usuarios[]>(this.url)
+    return this.httpClient.get<Usuarios[]>(URL_USUARIOS)
       .pipe(
         retry(2),
         catchError(this.handleError))
@@ -31,7 +30,7 @@ export class UsuariosService {
 
    // salva um usuario
    saveUsers(usuario: Usuarios): Observable<Usuarios> {
-    return this.httpClient.post<Usuarios>(this.url, JSON.stringify(usuario), this.httpOptions)
+    return this.httpClient.post<Usuarios>(URL_USUARIOS, JSON.stringify(usuario), this.httpOptions)
       .pipe(
         retry(2),
         catchError(this.handleError)
@@ -40,7 +39,7 @@ export class UsuariosService {
 
     // deleta um usuario
     deleteUsuario(usuario: Usuarios) {
-        return this.httpClient.delete<Usuarios>(this.url + '/' + usuario.id, this.httpOptions)
+        return this.httpClient.delete<Usuarios>(URL_USUARIOS + '/' + usuario.id, this.httpOptions)
           .pipe(
             retry(1),
             catchError(this.handleError)

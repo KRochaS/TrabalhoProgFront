@@ -4,15 +4,16 @@ import { Observable, throwError } from 'rxjs';
 import { Usuarios } from '../models/usuarios';
 import { retry, catchError } from 'rxjs/operators';
 import { Apoiadores } from '../models/apoiadores';
+import config from '../config';
+
+const URL_APOIADORES = `${config.URL_BACKEND}/apoiadores`;
 
 @Injectable({
 	providedIn: 'root'
 })
 export class ApoiadoresService {
 
-	url = 'http://localhost:3000/apoiadores'; // api rest fake
-
-
+	
 	// injetando o HttpClient
 	constructor(private httpClient: HttpClient) { }
 
@@ -23,7 +24,7 @@ export class ApoiadoresService {
 
 	  // Obtem todos os apoiadores
 	  getApoiadores(): Observable<Apoiadores[]> {
-		return this.httpClient.get<Apoiadores[]>(this.url)
+		return this.httpClient.get<Apoiadores[]>(URL_APOIADORES)
 		  .pipe(
 			retry(2),
 			catchError(this.handleError))
@@ -31,7 +32,7 @@ export class ApoiadoresService {
 	
 	   // salva um usuario
 	   saveApoiadores(apoiadores: Apoiadores): Observable<Apoiadores> {
-		return this.httpClient.post<Apoiadores>(this.url, JSON.stringify(apoiadores), this.httpOptions)
+		return this.httpClient.post<Apoiadores>(URL_APOIADORES, JSON.stringify(apoiadores), this.httpOptions)
 		  .pipe(
 			retry(2),
 			catchError(this.handleError)

@@ -11,12 +11,6 @@
       "email": "email@email.com",
       "senha": "senha1234",
       "id": 2
-    },
-    {
-      "nome": "Karine Rocha",
-      "email": "karinerocha.s@hotmail.com",
-      "senha": "info123",
-      "id": 3
     }
   ],
   "apoiadores": [
