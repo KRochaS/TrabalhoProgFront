@@ -24,8 +24,8 @@ export class CustomValidator {
 
     static MaxLengthValidator(control: FormControl) {
 
-        if(control.value.length > 10) {
-            return { 'Não é permitido mais de 5 caracteres': true};
+        if(control.value.length > 20) {
+            return { 'Não é permitido mais de 20 caracteres': true};
         }
 
         return null;

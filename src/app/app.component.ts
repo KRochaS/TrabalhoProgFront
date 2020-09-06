@@ -12,7 +12,8 @@ export class AppComponent  implements OnInit{
     positionClass: 'toast-top-right',
     animation: 'fade',
     timeout: 3000,
-    showCloseButton: true
+    showCloseButton: true,
+    limit: 1
   });
   constructor() {
 

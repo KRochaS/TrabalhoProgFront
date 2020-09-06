@@ -1,0 +1,32 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Karine Rocha",
+      "email": "karinerocha.s@hotmail.com",
+      "senha": "info12345"
+    },
+    {
+      "nome": "Novoteste",
+      "email": "email@email.com",
+      "senha": "senha1234",
+      "id": 2
+    },
+    {
+      "nome": "Karine Rocha",
+      "email": "karinerocha.s@hotmail.com",
+      "senha": "info123",
+      "id": 3
+    }
+  ],
+  "apoiadores": [
+    {
+      "id": 1,
+      "email": "karinerocha.s@hotmail.com"
+    },
+    {
+      "id": 2,
+      "email": "email@email.com"
+    }
+  ]
+}

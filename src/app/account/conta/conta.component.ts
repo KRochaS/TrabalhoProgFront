@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { ToasterService } from 'angular2-toaster';
 import { Router } from '@angular/router';
+import { UsuariosService } from 'src/app/services/usuarios.service';
 
 @Component({
     selector: 'app-conta',
@@ -11,12 +12,15 @@ import { Router } from '@angular/router';
 export class ContaComponent implements OnInit {
     public form: FormGroup;
     toggle;
+    public userAutenticado;
   
     constructor(private formBuilder: FormBuilder,
         private toasterService: ToasterService,
-        private router: Router) {
+        private router: Router,
+        private usuarioService: UsuariosService) {
 
         this.form = this.formBuilder.group({
+            id: [''],
             nome: ['', Validators.required],
             email: ['', Validators.required],
             senha: ['', Validators.required]
@@ -26,11 +30,18 @@ export class ContaComponent implements OnInit {
 
     ngOnInit() {
 
+        const userAutenticado = localStorage.getItem('userAutenticado');
+
+        this.userAutenticado = JSON.parse(userAutenticado);
+
+        if(this.userAutenticado) {
+            this.form.setValue(this.userAutenticado);
+
+        }
+
+
     }
 
-    onSubmit() {
-   
-    }
 
     changeType(password) {
         if (password.type == "password")
@@ -42,6 +53,11 @@ export class ContaComponent implements OnInit {
     }
 
     deletarConta() {
-        
+        this.usuarioService.deleteUsuario(this.form.value).subscribe((resp) => {
+           console.log(resp);
+           this.toasterService.pop('success', 'Usuário deletado com sucesso!');
+        });
+        localStorage.removeItem('userAutenticado');
+        this.router.navigateByUrl('/');
     }
 }

@@ -7,6 +7,7 @@ import { SignupComponent } from './account/signup/signup.component';
 import { ContaComponent } from './account/conta/conta.component';
 import { ApoieComponent } from './apoie/apoie.component';
 import { InformacoesComponent } from './informacoes/informacoes.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 const routes: Routes = [

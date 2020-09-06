@@ -18,7 +18,7 @@
                         <a> Conta <span uk-icon="icon:  triangle-down"></span></a>
                         <div uk-dropdown="mode: click;" class="uk-padding-small">
                             <ul class="uk-nav uk-dropdown-nav ">
-                                <li><a [routerLink]="['/login']" style="color:black !important;"> {{user.name}}</a></li>
+                                <li><a (click)="toConta()" style="color:black !important;"> {{user}}</a></li>
                                 <li><a (click)="logout()" style="color:black !important;">Logout</a></li>
                             </ul>
                         </div>
