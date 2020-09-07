@@ -38,8 +38,10 @@ O sistema proposto é direcionado para levar apoio para as pessoas que sofrem da
 
 #### Módulo 4: Javascript
 - [x] Validação dos formulários
+- [x] Criação Filtro por tipo de Informações
 - [x] Criação de <i>Models</i> para Usuário e Apoiadores
 - [x] Criação de <i> Services </i> de Usuário e Apoiadores
+- [x] Validação se o usuário está logado para poder ser um apoiador
 - [x] Utilização do [JSON Server](https://github.com/typicode/json-server) (API Fake)
    - [x] Criação de conta utilizando método POST
    - [x] Gravação de Apoiadores utilizando método POST
