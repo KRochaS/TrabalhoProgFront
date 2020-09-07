@@ -13,3 +13,16 @@ body {
 h3.sub-title {
     color: #840240;
   }
+
+  .uk-subnav a {
+      color: #000 !important;
+  }
+  .uk-subnav-pill>.uk-active>a {
+    background-color: #7429A6;
+    color: #fff !important;
+}
+
+.actived {
+    background-color: #7429A6;
+    color: #fff !important;
+}

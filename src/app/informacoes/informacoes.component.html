@@ -1,49 +1,74 @@
 
 <app-navbar></app-navbar>
-<section class="uk-section uk-padding-remove-top">
-    <div class="uk-container uk-padding-remove-top">
+<section class="uk-section">
+    <div class="uk-container">
       <h3 class="sub-title uk-margin-small-top"> Informações </h3>
+
+      <div uk-filter="target: .js-filter">
+
+        <ul class="uk-subnav uk-subnav-pill">
+            <li uk-filter-control=".Todas"><a
+                
+                (click)="filterTodas()">Todas</a></li>
+            <li uk-filter-control=".Trabalhistas"><a (click)="filterTrabalhistas()">Trabalhistas</a></li>
+            <li uk-filter-control=".Atividades"><a  (click)=filterAtividadesFisicas()>Atividades Físicas</a></li>
+            <li uk-filter-control=".Sintomas"><a (click)="filterSintomas()"> Sintomas </a></li>
+        </ul>
+
+        <ul class="js-filter uk-child-width-1-2 uk-child-width-1-3@m uk-text-center" uk-grid>
+         
+        </ul>
+    
+       
+    </div>
+
   
       <div class="uk-grid-column-small uk-grid-row-small" uk-grid>
         <div *ngFor="let info of informacoesTotal" class="uk-card uk-card-default uk-card-body">
-          <div class="uk-card-header uk-padding-remove-horizontal">
-            <div class="uk-grid-small uk-flex-middle" uk-grid>
-              <div class="uk-width-expand">
-                <h1 class="uk-card-title"> {{info.titulo}}</h1>
-                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00"> {{info.data}}</time></p>
-              </div>
-            </div>
-          </div>
-          <div class="uk-card-body">
-            <p>{{info.texto.substr(0, 322)+'...'}} </p>
-          </div>
-
-
-          <div id="my-id" class="uk-flex-top" uk-modal>
-            <div class="uk-modal-dialog uk-margin-auto-vertical">
-                <div class="uk-modal-header">
-                    <h4 class="uk-modal-title"> Redirecionando...</h4>
-                </div>
+            <div class="js-filter">
+                <div [class]="info.tag">
+                    <div class="uk-card-header uk-padding-remove-horizontal">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                          <div class="uk-width-expand">
+                            <h1 class="uk-card-title"> {{info.titulo}}</h1>
+                            <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00"> {{info.data}}</time></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="uk-card-body">
+                        <p>{{info.texto.substr(0, 322)+'...'}} </p>
+                      </div>
             
-                <div class="uk-modal-body">
-                    <p>Você será redirecionado para uma página web</p>
-        
+            
+                      <div id="my-id" class="uk-flex-top" uk-modal>
+                        <div class="uk-modal-dialog uk-margin-auto-vertical">
+                            <div class="uk-modal-header">
+                                <h4 class="uk-modal-title"> Redirecionando...</h4>
+                            </div>
+                        
+                            <div class="uk-modal-body">
+                                <p>Você será redirecionado para uma página web</p>
+                    
+                            </div>
+                            <div class="uk-modal-footer">
+                                <p class="uk-text-right">
+                                    <button class="uk-button uk-button-primary" (click)="redirecionar(info.link)" type="button">Ok</button>
+                                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancelar</button>
+                                </p>
+                    
+                    
+                            </div>
+                        </div>
+                    </div>
+                    
+            
+                      <div class="uk-card-footer">
+                        <a  uk-toggle="target: #my-id" class="uk-button uk-button-text"> Leia Mais</a>
+                      </div>
                 </div>
-                <div class="uk-modal-footer">
-                    <p class="uk-text-right">
-                        <button class="uk-button uk-button-primary" (click)="redirecionar(info.link)" type="button">Ok</button>
-                        <button class="uk-button uk-button-default uk-modal-close" type="button">Cancelar</button>
-                    </p>
-        
-        
-                </div>
-            </div>
-        </div>
-        
 
-          <div class="uk-card-footer">
-            <a  uk-toggle="target: #my-id" class="uk-button uk-button-text"> Leia Mais</a>
-          </div>
+            </div>
+         
         </div>
     </div>
   
