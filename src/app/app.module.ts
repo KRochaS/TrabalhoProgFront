@@ -15,6 +15,7 @@ import { FramePageComponent } from './frame-page/frame-page.component';
 import { HomeComponent } from './home/home.component';
 import { InformacoesComponent } from './informacoes/informacoes.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NgxLoadingModule, ngxLoadingAnimationTypes } from 'ngx-loading';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,15 @@ import { NavbarComponent } from './navbar/navbar.component';
     ToasterModule.forRoot(),
     NoopAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxLoadingModule.forRoot({
+        animationType: ngxLoadingAnimationTypes.threeBounce,
+        backdropBackgroundColour: 'rgba(0,0,0,0.4)', 
+        backdropBorderRadius: '4px',
+        primaryColour: '#ffffff', 
+        secondaryColour: '#ffffff', 
+        tertiaryColour: '#ffffff'
+    })
 
    
   ],

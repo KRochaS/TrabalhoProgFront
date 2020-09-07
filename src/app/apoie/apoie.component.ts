@@ -12,7 +12,7 @@ import { Apoiadores } from '../models/apoiadores';
     styleUrls: ['./apoie.component.css']
 })
 export class ApoieComponent implements OnInit {
-    loading = false;
+    loading = true;
    
     apoiadoresTotal = 0;
     width = '';
@@ -36,10 +36,12 @@ export class ApoieComponent implements OnInit {
     }
 
     buscaApoiadores() {
+        this.loading = true;
         this.apoiadoresService.getApoiadores().subscribe((apoiadores: Apoiadores[]) => {
             this.apoiadores = apoiadores;
             this.apoiadoresTotal = this.apoiadores.length;
             this.width = this.apoiadoresTotal + '%';
+            this.loading = false;
 
         })
     }
@@ -47,6 +49,7 @@ export class ApoieComponent implements OnInit {
     
     apoie() {
     
+        this.loading = true;
       const userAutenticado = localStorage.getItem('userAutenticado');
 
       this.userAutenticado = JSON.parse(userAutenticado);
@@ -54,6 +57,7 @@ export class ApoieComponent implements OnInit {
      console.log(this.userAutenticado);
 
      if(this.userAutenticado === null) {
+         this.loading = false;
         this.toasterService.pop('warning', 'É necessário registrar-se para apoiar');
         this.router.navigateByUrl('/login');
      } else {
@@ -63,6 +67,7 @@ export class ApoieComponent implements OnInit {
         console.log(apoiadores);
 
         if(apoiadores) {
+            this.loading = false;
             this.toasterService.pop('warning', 'Você já apoiou esta causa');
 
         } else {
@@ -73,6 +78,7 @@ export class ApoieComponent implements OnInit {
             this.apoiadoresService.saveApoiadores(body).subscribe((resp) => {
                 this.toasterService.pop('success', 'Agradecemos seu apoio nesta causa');
                 this.buscaApoiadores();
+        
             })
         }
 

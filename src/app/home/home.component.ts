@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit() {
-        // window.location.reload();
+
 
     }
 
