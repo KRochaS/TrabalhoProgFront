@@ -27,7 +27,7 @@ O sistema proposto é direcionado para levar apoio para as pessoas que sofrem da
 - [x] Criação da proposta do projeto a ser implementado
 
 
-#### Módulo 2: HTML e CSS
+#### Módulo 2 e 3: HTML e CSS
 - [x] Criação e estilização da navegação entre as páginas
 - [x] Criação e estilização da página <i> Início </i>
 - [x] Criação e estilização da página <i> Apoie </i>
@@ -49,11 +49,12 @@ O sistema proposto é direcionado para levar apoio para as pessoas que sofrem da
    - [x] Busca de Usuários já cadastrados utilizando método GET
    - [x] Busca de apoiadores já cadastrados utilizando método GET
 - [x] Autentificação do usuário utilizando <i> localstorage </i>
-- [x] Deploy do <i> Backend fake (db.json) </i> na [Heroku](https://www.heroku.com/)
 - [x] Utilização da lib  [concurrently](https://www.npmjs.com/package/concurrently) 
         <br />
   <i> Utilizada para mesclar dois comandos para rodar o projeto <br>
           (front-end e backend fake) em um comando só</i>
+- [x] Deploy do <i> Backend fake (db.json) </i> na [Heroku](https://www.heroku.com/)
+
 
 ## :sparkles: Executar o projeto
 
