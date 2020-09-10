@@ -38,6 +38,7 @@ O sistema proposto é direcionado para levar apoio para as pessoas que sofrem da
 
 #### Módulo 4: Javascript
 - [x] Validação dos formulários
+  -  [x] Criação do <i> CustomValidator </i>
 - [x] Criação Filtro por tipo de Informações
 - [x] Criação de <i>Models</i> para Usuário e Apoiadores
 - [x] Criação de <i> Services </i> de Usuário e Apoiadores
