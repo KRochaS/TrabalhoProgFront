@@ -21,7 +21,6 @@ Desenvolvido para a disciplina de Programação Front-end.
 O sistema proposto é direcionado para levar apoio para as pessoas que sofrem da sindrome de Fibromialgia, uma síndrome que causa dores em todo o corpo e informações para as pessoas que não possuem conhecimento.
 
 ## :bookmark_tabs: Funcionalidades 
-###### :construction: em construção
 
 #### Módulo 1: Proposta
 - [x] Criação da proposta do projeto a ser implementado
@@ -56,6 +55,15 @@ O sistema proposto é direcionado para levar apoio para as pessoas que sofrem da
           (front-end e backend fake) em um comando só</i>
 - [x] Deploy do <i> Backend fake (db.json) </i> na [Heroku](https://www.heroku.com/)
 
+#### Módulo 5: Javascript
+- [x] Estruturação MVC
+  -  [x] View ( HTML, CSS, TS )
+   - [x] Controller (Services)
+        <br />
+   <i> Devido a utilização do JSON Server o db.json não foi colocado em uma pasta </i>
+      <br />
+   <i> para evitar possíveis erros ao rodar o projeto </i>
+ - [x] Vídeo do funcionamento do site
 
 ## :sparkles: Executar o projeto
 
