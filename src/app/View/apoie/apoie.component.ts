@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToasterService } from 'angular2-toaster';
-import { UsuariosService } from '../services/usuarios.service';
-import { ApoiadoresService } from '../services/apoiadores.service';
-import { Usuarios } from '../models/usuarios';
-import { Apoiadores } from '../models/apoiadores';
+import { ApoiadoresService } from 'src/app/Controller/services/apoiadores.service';
+import { Apoiadores } from 'src/app/interfaces/apoiadores';
+import { Usuarios } from 'src/app/interfaces/usuarios';
+
 
 @Component({
     selector: 'app-apoie',
@@ -24,7 +24,6 @@ export class ApoieComponent implements OnInit {
     constructor(
         private toasterService: ToasterService,
         private router: Router,
-        private usuarioService: UsuariosService,
         private apoiadoresService: ApoiadoresService) { }
 
     ngOnInit() {

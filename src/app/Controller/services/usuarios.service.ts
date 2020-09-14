@@ -1,9 +1,10 @@
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { Usuarios } from '../models/usuarios';
 import { Observable, throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
-import config from '../config';
+import { catchError, retry } from 'rxjs/operators';
+import { Usuarios } from 'src/app/interfaces/usuarios';
+
+import config from '../../config';
 
 const URL_USUARIOS = `${config.URL_BACKEND}/usuarios`;
 

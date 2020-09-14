@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators, FormGroup, FormBuilder } from '@angular/forms';
-import { ToasterService } from 'angular2-toaster';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UsuariosService } from 'src/app/services/usuarios.service';
+import { ToasterService } from 'angular2-toaster';
+import { UsuariosService } from 'src/app/Controller/services/usuarios.service';
 
 @Component({
     selector: 'app-conta',

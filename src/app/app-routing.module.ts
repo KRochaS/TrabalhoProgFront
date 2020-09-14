@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { FramePageComponent } from './frame-page/frame-page.component';
-import { LoginComponent } from './account/login/login.component';
-import { SignupComponent } from './account/signup/signup.component';
-import { ContaComponent } from './account/conta/conta.component';
-import { ApoieComponent } from './apoie/apoie.component';
-import { InformacoesComponent } from './informacoes/informacoes.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { ContaComponent } from './View/account/conta/conta.component';
+import { LoginComponent } from './View/account/login/login.component';
+import { SignupComponent } from './View/account/signup/signup.component';
+import { ApoieComponent } from './View/apoie/apoie.component';
+import { FramePageComponent } from './View/frame-page/frame-page.component';
+import { HomeComponent } from './View/home/home.component';
+import { InformacoesComponent } from './View/informacoes/informacoes.component';
+
 
 
 const routes: Routes = [

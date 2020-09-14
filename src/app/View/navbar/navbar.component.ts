@@ -1,10 +1,6 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
-import { map } from 'rxjs/operators';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToasterService } from 'angular2-toaster';
-import { Usuarios } from '../models/usuarios';
-import { UsuariosService } from '../services/usuarios.service';
-import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-navbar',
@@ -14,9 +10,9 @@ import { Observable } from 'rxjs';
 export class NavbarComponent implements OnInit, OnChanges {
     public user: any = 'Login/Cadastre-se';
     public userAutenticado = null;
-  
 
-    constructor (
+
+    constructor(
         private router: Router,
         private toasterService: ToasterService) {
     }
@@ -26,13 +22,13 @@ export class NavbarComponent implements OnInit, OnChanges {
 
         this.userAutenticado = JSON.parse(userAutenticado);
 
-        if(this.userAutenticado !== null) {
+        if (this.userAutenticado !== null) {
             this.user = this.userAutenticado.nome;
         } else {
             this.user = 'Login/Cadastre-se'
         }
-        
-       
+
+
 
     }
 
@@ -41,7 +37,7 @@ export class NavbarComponent implements OnInit, OnChanges {
     }
 
     toConta() {
-        if(this.userAutenticado) {
+        if (this.userAutenticado) {
             this.router.navigateByUrl('/conta');
 
         } else {
@@ -55,7 +51,7 @@ export class NavbarComponent implements OnInit, OnChanges {
         this.toasterService.pop('success', 'Você foi deslogado com sucesso');
         this.user = 'Login/Cadastre-se';
         this.router.navigateByUrl('/');
-        
+
     }
 }
 

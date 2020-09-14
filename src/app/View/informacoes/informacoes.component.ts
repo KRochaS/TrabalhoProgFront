@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ToasterService } from 'angular2-toaster';
 import { Router } from '@angular/router';
+import { ToasterService } from 'angular2-toaster';
 
 @Component({
     selector: 'app-informacoes',
