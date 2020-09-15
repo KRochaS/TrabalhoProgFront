@@ -55,7 +55,7 @@ O sistema proposto é direcionado para levar apoio para as pessoas que sofrem da
           (front-end e backend fake) em um comando só</i>
 - [x] Deploy do <i> Backend fake (db.json) </i> na [Heroku](https://www.heroku.com/)
 
-#### Módulo 5: Javascript
+#### Módulo 5: Estruturação de Pastas
 - [x] Estruturação MVC
   -  [x] View ( HTML, CSS, TS )
    - [x] Controller (Services)
